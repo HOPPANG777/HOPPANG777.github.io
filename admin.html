@@ -143,6 +143,7 @@ function renderEditor(){
     h+='<details class="card tabcard" data-tab="'+i+'"'+(openTabs[i]?' open':'')+'><summary>'+(i+1)+'. '+E(t.label||t.title||'(이름 없음)')+' <span class="id">#'+E(t.id)+'</span>'+tools('t',i)+'</summary>'+
       '<div class="row"><div>'+inp('tabs.'+i+'.label','메뉴 이름')+'</div><div>'+inp('tabs.'+i+'.title','큰 제목')+'</div></div>'+
       '<div class="row"><div>'+inp('tabs.'+i+'.eyebrow','영문 머리글',{ph:'SELECTED WORK'})+'</div><div><label>주소 이름 (영어)</label><input data-id="'+i+'" value="'+E(t.id)+'"></div></div>'+
+      '<label>보기 방식</label><select data-path-sel="tabs.'+i+'.layout"><option value="list"'+(t.layout!=='links'?' selected':'')+'>칸 목록 (제목·설명)</option><option value="links"'+(t.layout==='links'?' selected':'')+'>세로 링크 (연락처처럼)</option></select>'+
       inp('tabs.'+i+'.intro','소개 글',{area:1})+
       '<div class="row"><div>'+inp('tabs.'+i+'.stat.value','큰 숫자 (선택)',{ph:'302회'})+'</div><div>'+inp('tabs.'+i+'.stat.label','숫자 설명')+'</div></div>'+
       '<h3>항목</h3>';
@@ -167,7 +168,7 @@ ed.addEventListener('input',function(e){var t=e.target,p=t.getAttribute('data-pa
   if(p){setPath(S.data,p,t.value);setDirty(true);pushPreview();return;}
   p=t.getAttribute('data-url');if(p){setPath(S.data,p,t.value.trim());setDirty(true);pushPreview();}
 });
-ed.addEventListener('change',function(e){var t=e.target,p=t.getAttribute('data-link');
+ed.addEventListener('change',function(e){var t=e.target,ps=t.getAttribute('data-path-sel');if(ps){setPath(S.data,ps,t.value);setDirty(true);pushPreview();return;}var p=t.getAttribute('data-link');
   if(p){var u=ed.querySelector('[data-url="'+p+'"]');
     if(t.value==='__url'){u.classList.remove('hide');setPath(S.data,p,u.value.trim());u.focus();}
     else{u.classList.add('hide');setPath(S.data,p,t.value);}
@@ -180,7 +181,7 @@ ed.addEventListener('change',function(e){var t=e.target,p=t.getAttribute('data-l
 });
 ed.addEventListener('click',function(e){var b=e.target.closest('[data-act]');if(!b)return;e.preventDefault();
   var a=b.getAttribute('data-act').split('|'),d=S.data;
-  if(a[0]==='addt'){d.tabs.push({id:newId(),label:'새 탭',eyebrow:'',title:'새 탭',intro:'',items:[]});openTabs[d.tabs.length-1]=true;}
+  if(a[0]==='addt'){d.tabs.push({id:newId(),label:'새 탭',eyebrow:'',title:'새 탭',layout:'list',intro:'',items:[]});openTabs[d.tabs.length-1]=true;}
   else if(a[0]==='addq')d.quickLinks.push({label:'',href:''});
   else if(a[0]==='addi'){d.tabs[+a[1]].items=d.tabs[+a[1]].items||[];d.tabs[+a[1]].items.push({title:'',text:'',href:'',linkLabel:''});}
   else{var kind=a[1],i=+a[2],j=a[3]!=null?+a[3]:null;
