@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "profile": {
+    "kicker": "GAME PROGRAMMER",
+    "name": "조승영",
+    "alias": "VicZero",
+    "lead": "C++과 DirectX로 엔진부터 만드는 게임 프로그래머",
+    "affil": "청강문화산업대학교 26학번",
+    "button": { "label": "연락하기", "href": "#contact" }
+  },
+  "quickLinks": [
+    { "label": "만든 것 보기", "href": "#work" },
+    { "label": "공부 기록", "href": "#log" }
+  ],
+  "tabs": [
+    {
+      "id": "skills", "label": "기술", "eyebrow": "CAPABILITIES", "title": "할 수 있는 것", "intro": "",
+      "items": [
+        { "title": "C·C++", "text": "클래스, STL, 스마트 포인터, OpenMP", "href": "#work", "linkLabel": "NG_Engine에서 씀" },
+        { "title": "DirectX 렌더링", "text": "스왑체인, 렌더링 파이프라인, 자체 엔진", "href": "#work", "linkLabel": "NG_Engine에서 씀" },
+        { "title": "그래픽스", "text": "레이트레이싱 직접 구현, 셰이더", "href": "#log", "linkLabel": "공부 기록 보기" },
+        { "title": "Unity C#", "text": "2D 퍼즐 게임 제작, 데이터 분리 설계, 자동 테스트", "href": "#work", "linkLabel": "Project-Ruin에서 씀" },
+        { "title": "알고리즘", "text": "A*, JPS, DFS·BFS", "href": "#log", "linkLabel": "공부 기록 보기" },
+        { "title": "WinAPI", "text": "", "href": "", "linkLabel": "" }
+      ]
+    },
+    {
+      "id": "work", "label": "작업", "eyebrow": "SELECTED WORK", "title": "만든 것", "intro": "",
+      "items": [
+        { "title": "Project-Ruin", "text": "유적을 탐험하며 빛줄기·파이프·별자리 퍼즐을 푸는 2D 게임. 기획자가 퍼즐과 대사를 엑셀로 바로 고칠 수 있게 데이터를 따로 뺐고, 자동 테스트 48개를 붙였습니다. Unity C#", "href": "https://github.com/HOPPANG777/Project-Ruin", "linkLabel": "저장소" },
+        { "title": "NG_Engine", "text": "C++과 DirectX 11로 만들고 있는 2D 게임 엔진. 렌더러, 컴포넌트, 씬, 입력, 디버그 창을 모듈로 나눴습니다. 진행 중", "href": "https://github.com/HOPPANG777/NG_Engine", "linkLabel": "저장소" },
+        { "title": "Final_Fantasy_H", "text": "DirectX 11로 프레임워크부터 짜서 고전 RPG의 타이틀·메뉴 화면을 따라 만든 연습작", "href": "https://github.com/HOPPANG777/Final_Fantasy_H", "linkLabel": "저장소" }
+      ]
+    },
+    {
+      "id": "log", "label": "공부 기록", "eyebrow": "LEARNING LOG", "title": "공부 기록",
+      "intro": "VZ-Note에 언어, 자료구조, 알고리즘, 그래픽스, 엔진 공부를 정리하고 있습니다.",
+      "stat": { "value": "302회", "label": "최근 1년 GitHub 기여" },
+      "items": [
+        { "title": "VZ-Note", "text": "공부 노트 저장소", "href": "https://github.com/HOPPANG777/VZ-Note", "linkLabel": "노트 보기" }
+      ]
+    },
+    {
+      "id": "direction", "label": "방향", "eyebrow": "DIRECTION", "title": "방향과 원칙",
+      "intro": "엔진을 이해하는 게임 프로그래머가 목표입니다. 콘솔 게임으로 시작해 DirectX로 엔진을 직접 만들고, 그 엔진으로 스팀에 낼 게임을 만들려고 합니다.",
+      "items": [
+        { "title": "친절", "text": "물어보면 바로 답하고, 설명은 쉽게 합니다.", "href": "", "linkLabel": "" },
+        { "title": "가독성", "text": "다음 사람이 바로 읽을 수 있게 씁니다. 주석은 한 줄, 기능은 역할별로 나눕니다.", "href": "", "linkLabel": "" },
+        { "title": "학습", "text": "모르는 건 공부해서 만듭니다. 막히면 노트에 정리하면서 풉니다.", "href": "#log", "linkLabel": "공부 기록 보기" }
+      ]
+    },
+    {
+      "id": "contact", "label": "연락", "eyebrow": "CONTACT", "title": "연락", "intro": "",
+      "items": [
+        { "title": "GitHub", "text": "github.com/HOPPANG777", "href": "https://github.com/HOPPANG777", "linkLabel": "" },
+        { "title": "이메일", "text": "viczero2006@gmail.com", "href": "mailto:viczero2006@gmail.com", "linkLabel": "" },
+        { "title": "전화", "text": "010-6307-4590", "href": "tel:010-6307-4590", "linkLabel": "" }
+      ]
+    }
+  ]
+}
